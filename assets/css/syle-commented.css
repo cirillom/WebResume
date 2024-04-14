@@ -1,0 +1,1307 @@
+/* Estilo aplicado para o elemento body. Seletor simples de nome do elemento */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+  }
+  
+  /* Estilo aplicado para o elemento a, que é um link. Seletor simples de nome do elemento */
+  a {
+    color: #0563bb;
+    text-decoration: none;
+  }
+  
+  /* Estilo aplicado para o elemento a quando o mouse passa sobre ele (hover). Seletor de pseudo-classe */
+  a:hover {
+    color: #067ded;
+    text-decoration: none;
+  }
+  
+  /* Estilo aplicado para os elementos de cabeçalho (h1, h2, h3, h4, h5, h6). Seletor de grupo */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  /* Estilo aplicado para o botão de voltar ao topo. Classe .back-to-top */
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #0563bb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  /* Estilo aplicado para o ícone dentro do botão de voltar ao topo. Seletor descendente */
+  .back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  /* Estilo aplicado para o botão de voltar ao topo quando o mouse passa sobre ele (hover). Seletor de pseudo-classe */
+  .back-to-top:hover {
+    background: #0678e3;
+    color: #fff;
+  }
+  
+  /* Estilo aplicado para o botão de voltar ao topo quando está ativo. Classe .active */
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Estilo aplicado para o pré-carregador. ID #preloader */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  /* Estilo aplicado antes do pré-carregador. Seletor pseudo-elemento ::before */
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #0563bb;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  /* Animação aplicada para o pré-carregador. Chave @keyframes */
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Estilo aplicado para desativar o atraso da animação AOS em dispositivos móveis. Consulta de mídia */
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+  /* Estilo aplicado para o cabeçalho. ID #header */
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 15px;
+    overflow-y: auto;
+  }
+  
+  /* Estilo aplicado para o cabeçalho em dispositivos com largura máxima de 991px. Consulta de mídia */
+  @media (max-width: 991px) {
+    #header {
+      width: 300px;
+      background: #fff;
+      border-right: 1px solid #e6e9ec;
+      left: -300px;
+    }
+  }
+  
+  /* Estilo aplicado para o elemento principal em dispositivos com largura mínima de 991px. Consulta de mídia */
+  @media (min-width: 991px) {
+    #main {
+      margin-left: 100px;
+    }
+  }
+  
+  /* Estilo aplicado para o menu de navegação. Classe .nav-menu */
+  .nav-menu {
+    padding: 0;
+    display: block;
+  }
+  
+  /* Estilo aplicado para todos os elementos dentro do .nav-menu. Seletor universal */
+  .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Estilo aplicado para os itens de lista diretos do .nav-menu. Seletor filho */
+  .nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  /* Estilo aplicado para os links dentro do .nav-menu. Seletor descendente */
+  .nav-menu a,
+  .nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #45505b;
+    padding: 10px 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+    border-radius: 50px;
+    background: #f2f3f5;
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  /* Estilo aplicado para os ícones dentro dos links do .nav-menu. Seletor descendente */
+  .nav-menu a i,
+  .nav-menu a:focus i {
+    font-size: 20px;
+  }
+  
+  /* Estilo aplicado para o texto dentro dos links do .nav-menu. Seletor descendente */
+  .nav-menu a span,
+  .nav-menu a:focus span {
+    padding: 0 5px 0 7px;
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado para os links e texto dentro do .nav-menu em dispositivos com largura mínima de 992px. Consulta de mídia */
+  @media (min-width: 992px) {
+    .nav-menu a,
+    .nav-menu a:focus {
+      width: 56px;
+    }
+  
+    .nav-menu a span,
+    .nav-menu a:focus span {
+      display: none;
+      color: #fff;
+    }
+  }
+  
+  /* Estilo aplicado para os links do .nav-menu quando o mouse passa sobre eles (hover), quando estão ativos e quando o item de lista pai é passado pelo mouse (hover). Seletor de pseudo-classe e seletor de grupo */
+  .nav-menu a:hover,
+  .nav-menu .active,
+  .nav-menu .active:focus,
+  .nav-menu li:hover>a {
+    color: #fff;
+    background: #0563bb;
+  }
+  
+  /* Estilo aplicado para o texto dentro dos links do .nav-menu quando o mouse passa sobre eles (hover), quando estão ativos e quando o item de lista pai é passado pelo mouse (hover). Seletor de pseudo-classe e seletor de grupo */
+  .nav-menu a:hover span,
+  .nav-menu .active span,
+  .nav-menu .active:focus span,
+  .nav-menu li:hover>a span {
+    color: #fff;
+  }
+  
+  /* Estilo aplicado para os links do .nav-menu quando o mouse passa sobre eles (hover) e quando o item de lista pai é passado pelo mouse (hover). Seletor de pseudo-classe e seletor de grupo */
+  .nav-menu a:hover,
+  .nav-menu li:hover>a {
+    width: 100%;
+    color: #fff;
+  }
+  
+  /* Estilo aplicado para o texto dentro dos links do .nav-menu quando o mouse passa sobre eles (hover) e quando o item de lista pai é passado pelo mouse (hover). Seletor de pseudo-classe e seletor de grupo */
+  .nav-menu a:hover span,
+  .nav-menu li:hover>a span {
+    display: block;
+  }
+  
+  /* Estilo aplicado para o botão de navegação móvel. Classe .mobile-nav-toggle */
+  .mobile-nav-toggle {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 0;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px;
+  }
+  
+  /* Estilo aplicado para o ícone dentro do botão de navegação móvel. Seletor descendente */
+  .mobile-nav-toggle i {
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado quando a navegação móvel está ativa. Classe .mobile-nav-active */
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+  
+  /* Estilo aplicado para o cabeçalho quando a navegação móvel está ativa. Classe .mobile-nav-active */
+  .mobile-nav-active #header {
+    left: 0;
+  }
+  
+  /* Estilo aplicado para o botão de navegação móvel quando a navegação móvel está ativa. Classe .mobile-nav-active */
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    background-color: #0563bb;
+  }
+  
+  /* Estilo aplicado para a seção do herói. ID #hero */
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg") top right no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Estilo aplicado para a seção do herói em dispositivos com largura mínima de 992px. Consulta de mídia */
+  @media (min-width: 992px) {
+    #hero {
+      padding-left: 160px;
+    }
+  }
+  
+  /* Estilo aplicado antes da seção do herói. Seletor pseudo-elemento ::before */
+  #hero:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Estilo aplicado para o título h1 dentro da seção do herói. Seletor descendente */
+  #hero h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado para o parágrafo dentro da seção do herói. Seletor descendente */
+  #hero p {
+    color: #45505b;
+    margin: 15px 0 0 0;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Estilo aplicado para o span dentro do parágrafo na seção do herói. Seletor descendente */
+  #hero p span {
+    color: #0563bb;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilo aplicado para os links de redes sociais na seção do herói. Seletor descendente */
+  #hero .social-links {
+    margin-top: 30px;
+  }
+  
+  /* Estilo aplicado para cada link de rede social na seção do herói. Seletor descendente */
+  #hero .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    color: #45505b;
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  /* Estilo aplicado para cada link de rede social na seção do herói quando o mouse passa sobre ele (hover). Seletor de pseudo-classe */
+  #hero .social-links a:hover {
+    color: #0563bb;
+  }
+  
+  /* Estilo aplicado para a seção do herói em dispositivos com largura máxima de 992px. Consulta de mídia */
+  @media (max-width: 992px) {
+    #hero {
+      text-align: center;
+    }
+  
+    #hero h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  
+    #hero p {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  
+  /* Estilo aplicado para as seções gerais. Seletor de tipo de elemento */
+  section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  /* Estilo aplicado para o título da seção. Classe .section-title */
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  /* Estilo aplicado para o título h2 dentro do título da seção. Seletor descendente */
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado antes do título h2 dentro do título da seção. Seletor pseudo-elemento ::before */
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  /* Estilo aplicado depois do título h2 dentro do título da seção. Seletor pseudo-elemento ::after */
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+  
+  /* Estilo aplicado para o parágrafo dentro do título da seção. Seletor descendente */
+  .section-title p {
+    margin-bottom: 0;
+  }
+
+  /* Estilo aplicado para o subtítulo h3 dentro do conteúdo da seção Sobre. Seletor descendente */
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #728394;
+  }
+  
+  /* Estilo aplicado para a lista não ordenada dentro do conteúdo da seção Sobre. Seletor descendente */
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Estilo aplicado para cada item de lista dentro do conteúdo da seção Sobre. Seletor descendente */
+  .about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo aplicado para o texto em negrito dentro dos itens de lista no conteúdo da seção Sobre. Seletor descendente */
+  .about .content ul strong {
+    margin-right: 10px;
+  }
+  
+  /* Estilo aplicado para os ícones dentro dos itens de lista no conteúdo da seção Sobre. Seletor descendente */
+  .about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #0563bb;
+    line-height: 0;
+  }
+  
+  /* Estilo aplicado para o último parágrafo dentro do conteúdo da seção Sobre. Seletor de pseudo-classe */
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Estilo aplicado para a seção de Fatos. Classe .facts */
+  .facts .count-box {
+    padding: 30px 30px 25px 30px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #fff;
+  }
+  
+  /* Estilo aplicado para os ícones dentro das caixas de contagem na seção de Fatos. Seletor descendente */
+  .facts .count-box i {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: #0563bb;
+    color: #fff;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+  }
+  
+  /* Estilo aplicado para os números dentro das caixas de contagem na seção de Fatos. Seletor descendente */
+  .facts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #011426;
+  }
+  
+  /* Estilo aplicado para os parágrafos dentro das caixas de contagem na seção de Fatos. Seletor descendente */
+  .facts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Estilo aplicado para a seção de Habilidades. Classe .skills */
+  .skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+  }
+  
+  /* Estilo aplicado para cada habilidade dentro da seção de Habilidades. Seletor descendente */
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado para o valor da habilidade dentro da barra de progresso na seção de Habilidades. Seletor descendente */
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  /* Estilo aplicado para a embalagem da barra de progresso na seção de Habilidades. Seletor descendente */
+  .skills .progress-bar-wrap {
+    background: #f2f3f5;
+  }
+  
+  /* Estilo aplicado para a barra de progresso na seção de Habilidades. Seletor descendente */
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #0563bb;
+  }
+  
+  /* Estilo aplicado para o título do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #45505b;
+  }
+  
+  /* Estilo aplicado para cada item do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #0563bb;
+    position: relative;
+  }
+  
+  /* Estilo aplicado para o título do cargo dentro de cada item do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #0563bb;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo aplicado para a data dentro de cada item do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-item h5 {
+    font-size: 16px;
+    background: #f7f8f9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo aplicado para a lista não ordenada dentro de cada item do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-item ul {
+    padding-left: 20px;
+  }
+  
+  /* Estilo aplicado para cada item da lista dentro de cada item do currículo na seção de Currículo. Seletor descendente */
+  .resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+  
+  /* Estilo aplicado para o último item do currículo na seção de Currículo. Seletor de pseudo-classe */
+  .resume .resume-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  /* Estilo aplicado antes de cada item do currículo na seção de Currículo. Seletor pseudo-elemento ::before */
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #0563bb;
+  }
+  
+  /* Estilo aplicado para a seção de Portfólio. Classe .portfolio */
+  .portfolio .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo aplicado para os filtros do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 25px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+  }
+  
+  /* Estilo aplicado para cada item de filtro do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Estilo aplicado para o item de filtro do portfólio quando o mouse passa sobre ele (hover) e quando está ativo na seção de Portfólio. Seletor de pseudo-classe e seletor de classe */
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    color: #0563bb;
+  }
+  
+  /* Estilo aplicado para o último item de filtro do portfólio na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  
+  /* Estilo aplicado para a embalagem do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(69, 80, 91, 0.8);
+  }
+  
+  /* Estilo aplicado antes da embalagem do portfólio na seção de Portfólio. Seletor pseudo-elemento ::before */
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+  }
+  
+  /* Estilo aplicado para as informações do portfólio dentro da embalagem do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo aplicado antes das informações do portfólio dentro da embalagem do portfólio na seção de Portfólio. Seletor pseudo-elemento ::before */
+  .portfolio .portfolio-wrap .portfolio-info::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 3px solid #d7dce1;
+    border-left: 3px solid #d7dce1;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+  }
+  
+  /* Estilo aplicado depois das informações do portfólio dentro da embalagem do portfólio na seção de Portfólio. Seletor pseudo-elemento ::after */
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 3px solid #d7dce1;
+    border-right: 3px solid #d7dce1;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+  }
+  
+  /* Estilo aplicado para o título do projeto dentro das informações do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #45505b;
+    font-weight: 600;
+  }
+  
+  /* Estilo aplicado para o parágrafo de descrição dentro das informações do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap .portfolio-info p {
+    color: #45505b;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo aplicado para os links do portfólio dentro da embalagem do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+  }
+  
+  /* Estilo aplicado para cada link do portfólio dentro da embalagem do portfólio na seção de Portfólio. Seletor descendente */
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: #45505b;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  /* Estilo aplicado para cada link do portfólio dentro da embalagem do portfólio quando o mouse passa sobre ele (hover) na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #148af9;
+  }
+  
+  /* Estilo aplicado para a embalagem do portfólio quando o mouse passa sobre ela (hover) na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  /* Estilo aplicado para as informações do portfólio dentro da embalagem do portfólio quando o mouse passa sobre ela (hover) na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+  }
+  
+  /* Estilo aplicado para as informações do portfólio dentro da embalagem do portfólio quando o mouse passa sobre ela (hover), especificamente para o pseudo-elemento ::before na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+  }
+  
+  /* Estilo aplicado para as informações do portfólio dentro da embalagem do portfólio quando o mouse passa sobre ela (hover), especificamente para o pseudo-elemento ::after na seção de Portfólio. Seletor de pseudo-classe */
+  .portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  /* Estilo aplicado para os detalhes do portfólio. Classe .portfolio-details */
+  .portfolio-details {
+    padding-top: 40px;
+  }
+  
+  /* Estilo aplicado para o slider dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-details-slider img {
+    width: 100%;
+  }
+  
+  /* Estilo aplicado para a paginação do slider dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  /* Estilo aplicado para cada ponto de paginação do slider dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #0563bb;
+  }
+  
+  /* Estilo aplicado para o ponto de paginação ativo do slider dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #0563bb;
+  }
+  
+  /* Estilo aplicado para as informações dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-info {
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08);
+  }
+  
+  /* Estilo aplicado para o subtítulo h3 dentro das informações dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Estilo aplicado para a lista não ordenada dentro das informações dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  /* Estilo aplicado para cada item da lista dentro das informações dos detalhes do portfólio, exceto o primeiro. Seletor de pseudo-classe */
+  .portfolio-details .portfolio-info ul li+li {
+    margin-top: 10px;
+  }
+  
+  /* Estilo aplicado para a descrição dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-description {
+    padding-top: 30px;
+  }
+  
+  /* Estilo aplicado para o título h2 dentro da descrição dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo aplicado para o parágrafo dentro da descrição dos detalhes do portfólio. Seletor descendente */
+  .portfolio-details .portfolio-description p {
+    padding: 0;
+  }
+
+  /* Estilo aplicado para a caixa de ícone na seção de Serviços. Classe .icon-box */
+.services .icon-box {
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+}
+
+/* Estilo aplicado para o ícone dentro da caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+/* Estilo aplicado para o ícone (elemento i) dentro do ícone na caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+/* Estilo aplicado para o ícone SVG dentro do ícone na caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG dentro do ícone na caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+/* Estilo aplicado para o título h4 dentro da caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+/* Estilo aplicado para o link dentro do título h4 na caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box h4 a {
+  color: #45505b;
+  transition: ease-in-out 0.3s;
+}
+
+/* Estilo aplicado para o parágrafo dentro da caixa de ícone na seção de Serviços. Seletor descendente */
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Estilo aplicado para a caixa de ícone quando o mouse passa sobre ela (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-blue na seção de Serviços. Seletor de classe */
+.services .iconbox-blue i {
+  color: #47aeff;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-blue quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-blue:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-blue quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-blue:hover .icon path {
+  fill: #47aeff;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-orange na seção de Serviços. Seletor de classe */
+.services .iconbox-orange i {
+  color: #ffa76e;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-orange quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-orange:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-orange quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-orange:hover .icon path {
+  fill: #ffa76e;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-pink na seção de Serviços. Seletor de classe */
+.services .iconbox-pink i {
+  color: #e80368;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-pink quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-pink:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-pink quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-pink:hover .icon path {
+  fill: #e80368;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-yellow na seção de Serviços. Seletor de classe */
+.services .iconbox-yellow i {
+  color: #ffbb2c;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-yellow quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-yellow:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-yellow quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-yellow:hover .icon path {
+  fill: #ffbb2c;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-red na seção de Serviços. Seletor de classe */
+.services .iconbox-red i {
+  color: #ff5828;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-red quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-red:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-red quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-red:hover .icon path {
+  fill: #ff5828;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-teal na seção de Serviços. Seletor de classe */
+.services .iconbox-teal i {
+  color: #11dbcf;
+}
+
+/* Estilo aplicado para o ícone com a classe .iconbox-teal quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-teal:hover .icon i {
+  color: #fff;
+}
+
+/* Estilo aplicado para o caminho do ícone SVG com a classe .iconbox-teal quando o mouse passa sobre ele (hover) na seção de Serviços. Seletor de pseudo-classe */
+.services .iconbox-teal:hover .icon path {
+  fill: #11dbcf;
+}
+
+/* Estilo aplicado para a seção de Depoimentos. Classe .testimonials */
+.testimonials .section-header {
+  margin-bottom: 40px;
+}
+
+/* Estilo aplicado para o carrossel de depoimentos e o controle deslizante de depoimentos na seção de Depoimentos. Seletor de grupo */
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+/* Estilo aplicado para cada item de depoimento na seção de Depoimentos. Seletor descendente */
+.testimonials .testimonial-item {
+  text-align: center;
+}
+
+/* Estilo aplicado para a imagem do depoente dentro do item de depoimento na seção de Depoimentos. Seletor descendente */
+.testimonials .testimonial-item .testimonial-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0 auto;
+}
+
+/* Estilo aplicado para o nome do depoente dentro do item de depoimento na seção de Depoimentos. Seletor descendente */
+.testimonials .testimonial-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+/* Estilo aplicado para a ocupação do depoente dentro do item de depoimento na seção de Depoimentos. Seletor descendente */
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 15px 0;
+}
+
+/* Estilo aplicado para os ícones de citação à esquerda e à direita dentro do item de depoimento na seção de Depoimentos. Seletor de grupo */
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: #90c8fc;
+  font-size: 26px;
+}
+
+/* Estilo aplicado para o ícone de citação à esquerda dentro do item de depoimento na seção de Depoimentos. Seletor de classe */
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+/* Estilo aplicado para o ícone de citação à direita dentro do item de depoimento na seção de Depoimentos. Seletor de classe */
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+/* Estilo aplicado para o texto do depoimento dentro do item de depoimento na seção de Depoimentos. Seletor descendente */
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+}
+
+/* Estilo aplicado para a paginação do controle deslizante de depoimentos na seção de Depoimentos. Seletor descendente */
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Estilo aplicado para cada ponto de paginação do controle deslizante de depoimentos na seção de Depoimentos. Seletor descendente */
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #0563bb;
+}
+
+/* Estilo aplicado para o ponto de paginação ativo do controle deslizante de depoimentos na seção de Depoimentos. Seletor descendente */
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #0563bb;
+}
+
+/* Estilo aplicado para o texto do depoimento dentro do item de depoimento na seção de Depoimentos em dispositivos com largura mínima de 992px. Consulta de mídia */
+@media (min-width: 992px) {
+  .testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+
+/* Estilo aplicado para a seção de Contato. Classe .contact */
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+
+/* Estilo aplicado para o ícone dentro das informações de contato na seção de Contato. Seletor descendente */
+.contact .info i {
+  font-size: 20px;
+  color: #0563bb;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #eef7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo aplicado para o título h4 dentro das informações de contato na seção de Contato. Seletor descendente */
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #45505b;
+}
+
+/* Estilo aplicado para o parágrafo dentro das informações de contato na seção de Contato. Seletor descendente */
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #728394;
+}
+
+/* Estilo aplicado para o e-mail e o telefone dentro das informações de contato na seção de Contato. Seletor de grupo */
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+/* Estilo aplicado para o ícone dentro das informações de contato quando o mouse passa sobre ele (hover) na seção de Contato. Seletor de pseudo-classe */
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #0563bb;
+  color: #fff;
+}
+
+/* Estilo aplicado para o formulário de e-mail PHP na seção de Contato. Classe .php-email-form */
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+/* Estilo aplicado para o grupo de formulário dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+/* Estilo aplicado para a mensagem de erro dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Estilo aplicado para a quebra de linha dentro da mensagem de erro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+/* Estilo aplicado para a mensagem enviada dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Estilo aplicado para o carregamento dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Estilo aplicado antes do carregamento dentro do formulário de e-mail PHP na seção de Contato. Seletor pseudo-elemento ::before */
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+/* Estilo aplicado para os campos de entrada e área de texto dentro do formulário de e-mail PHP na seção de Contato. Seletor de grupo */
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+/* Estilo aplicado para os campos de entrada de texto e e-mail dentro do formulário de e-mail PHP na seção de Contato. Seletor de grupo */
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email] {
+  height: 44px;
+}
+
+/* Estilo aplicado para a área de texto dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+/* Estilo aplicado para o botão de envio dentro do formulário de e-mail PHP na seção de Contato. Seletor descendente */
+.contact .php-email-form button[type=submit] {
+  background: #0563bb;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+/* Estilo aplicado para o botão de envio quando o mouse passa sobre ele (hover) dentro do formulário de e-mail PHP na seção de Contato. Seletor de pseudo-classe */
+.contact .php-email-form button[type=submit]:hover {
+  background: #0678e3;
+}
+
+/* Animação aplicada para o carregamento dentro do formulário de e-mail PHP na seção de Contato. Chave @keyframes */
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo aplicado para o rodapé. ID #footer */
+#footer {
+  background: #f7f8f9;
+  color: #45505b;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Estilo aplicado para o título h3 dentro do rodapé. Seletor descendente */
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+/* Estilo aplicado para o parágrafo dentro do rodapé. Seletor descendente */
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+/* Estilo aplicado para os links de redes sociais dentro do rodapé. Seletor descendente */
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+
+/* Estilo aplicado para cada link de rede social dentro do rodapé. Seletor descendente */
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #0563bb;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+/* Estilo aplicado para cada link de rede social quando o mouse passa sobre ele (hover) dentro do rodapé. Seletor de pseudo-classe */
+#footer .social-links a:hover {
+  background: #0678e3;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo aplicado para os direitos autorais dentro do rodapé. Seletor descendente */
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+
+/* Estilo aplicado para os créditos dentro do rodapé. Seletor descendente */
+#footer .credits {
+  font-size: 13px;
+}
